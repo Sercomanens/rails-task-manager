@@ -1,5 +1,6 @@
-<h1>Create a new task</h1>
-<%= form_with model: @task, url: tasks_path do |t| %>
+<h1>Edit: <%= @task.title %></h1>
+
+<%= form_with(model: @task, url: task_path(@task), method: "patch") do |t| %>
   <%= t.label :title %>
   <%= t.text_field :title %>
   <%= t.label :details %>
