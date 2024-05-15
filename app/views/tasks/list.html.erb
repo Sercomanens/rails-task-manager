@@ -1,0 +1,17 @@
+<div class="container my-3">
+<h1>My tasks</h1>
+
+<form action="/list">
+
+<% @tasks.each do |task| %>
+  <div class="d-flex align-items-center mb-2 border">
+    <% link_to  %>
+    <label>
+      <input type="checkbox" name="done" id="done" class="m-2"/>
+      <%= link_to task.title, find_path(task.id) %>
+    </label>
+  </div>
+<% end %>
+</div>
+
+</form>

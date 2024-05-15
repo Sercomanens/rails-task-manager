@@ -1,0 +1,16 @@
+<div class="container my-3">
+  <h1><%= @task.title %> </h1>
+
+  <p> <%= @task.details %>  </p>
+
+  <div class="d-flex align-items-center mb-2 border">
+    <label>
+      <input type="checkbox" name="done" id="done" class="m-2"/>
+      <% if params[:completed] %>
+        This task is completed.
+      <% else %>
+        This task is not completed.
+      <% end %>
+    </label>
+  </div>
+</div>
